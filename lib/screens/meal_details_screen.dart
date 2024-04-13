@@ -5,7 +5,7 @@ class   MealDetailsScreen extends StatelessWidget {
 
   static const routeName='/meal-details';
 
-  @override
+  
 
 
   Widget buildSectionTitle(BuildContext context,String text)
@@ -36,7 +36,8 @@ class   MealDetailsScreen extends StatelessWidget {
             child: child,
     );
   }
-
+  
+  @override
   Widget build(BuildContext context)
   {
     final mealId=ModalRoute.of(context)!.settings.arguments as String;
@@ -75,7 +76,7 @@ class   MealDetailsScreen extends StatelessWidget {
               child: ListView.builder(itemBuilder: 
               (ctx,index)=> Card(
       
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
                   child: Text(selectedMeal.ingredients[index]),
